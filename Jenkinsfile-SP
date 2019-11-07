@@ -1,0 +1,12 @@
+pipeline {
+    agent { label 'Master' } 
+      stages{
+          stage("SCM-CHECKOUT"){
+        git 'https://github.com/spatel3817/Java-Project'
+    }
+       stage ("execute"){
+        sh 'javac *.java'
+        sh 'java Simple'
+      }
+     }
+  }
