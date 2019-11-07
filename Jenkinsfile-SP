@@ -1,11 +1,17 @@
 pipeline {
     agent { label 'Master' } 
-          stage("SCM-CHECKOUT"){
-        git 'https://github.com/spatel3817/Java-Project'
-    }
-       stage ("execute"){
-        sh 'javac *.java'
-        sh 'java Simple'
+        stages {
+          stage ("SCM-CHECKOUT"){
+           steps {
+             git 'https://github.com/spatel3817/Java-Project'
+              }
+           }
+       stage ("execute") {
+           steps {
+                sh 'javac *.java'
+                 sh 'java Simple'
+               }
+         }
       }
    }
   
