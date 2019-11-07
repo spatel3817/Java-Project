@@ -1,0 +1,16 @@
+pipeline {
+    agent { label 'Master' }
+    stages {
+        stage ("SCM Chkout-1"){
+            steps {
+                git 'https://github.com/spatel3817/Java-Project'
+            }
+         }
+         stage ("Java execute"){
+              steps {
+                   sh 'javac *.java'
+                   sh 'java Simple'
+                 }
+           }
+      }
+}
