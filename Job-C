@@ -1,7 +1,7 @@
 node{  
    stage ('last stage') {
    sh 'mkdir jobc'
-       sh 'echo "This is test file">test.result
+       sh 'echo "This is test file">test.result'
        sh 'cp test.result jobc/'
        }
     }
