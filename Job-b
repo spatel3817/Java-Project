@@ -2,6 +2,6 @@ node{
   stage('shell scrpts') {
          sh 'ls -l'
          sh 'sleep 10'
-         sh 'cat *.java'
+         sh 'touch test.result'
         }
     }
