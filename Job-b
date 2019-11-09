@@ -2,7 +2,5 @@ node{
   stage('shell scrpts') {
          sh 'ls -l'
          sh 'sleep 10'
-         sh ' cp samplecode.java Java-Project/'
-         sh 'cat *.java'
         }
     }
